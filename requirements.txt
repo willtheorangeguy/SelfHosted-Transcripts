@@ -1,0 +1,9 @@
+# Core dependencies for WAN Show Archive scripts
+yt-dlp
+requests
+openai-whisper
+transformers
+ollama
+google-api-python-client
+language-tool-python
+torch
