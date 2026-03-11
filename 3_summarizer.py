@@ -107,7 +107,7 @@ def summarize_transcripts(file_path, model="llama3.1:8b"):
     for file in os.listdir(file_path):
         full_path = os.path.join(file_path, file)
         # Skip summary files and already processed files
-        if file.endswith(".txt") and not file.endswith("_LTT_comments.txt") and not file.endswith("_timestamps.txt") and not file.endswith("_summary.txt") and not file.endswith("corrected.txt") and not file.endswith("_LTT_comments.md") and not file.endswith("_timestamps.md") and not file.endswith("_summary.md") and not file.endswith("corrected.md") and file not in processed_files:
+        if file.endswith(".txt") and not file.endswith("_summary.txt") and not file.endswith("corrected.txt") and not file.endswith("_summary.md") and not file.endswith("corrected.md") and file not in processed_files:
             print(f"Processing {file}...")
             summarize_transcript(full_path, model)
             with open(log_path, "a", encoding="utf-8") as log_file:

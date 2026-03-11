@@ -98,10 +98,6 @@ def clean_text_file(file_path):
         for file in os.listdir(file_path):
             if (
                 (file.endswith(".txt") or file.endswith(".md"))
-                and not file.endswith("_LTT_comments.txt")
-                and not file.endswith("_LTT_comments.md")
-                and not file.endswith("_timestamps.txt")
-                and not file.endswith("_timestamps.md")
                 and not file.endswith("_corrected.txt")
                 and not file.endswith("_corrected.md")
             ):
